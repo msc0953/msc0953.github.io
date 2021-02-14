@@ -6,17 +6,7 @@
     <description>Recent content on 瑪利歐的測試</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <copyright>&amp;copy; 2021. All rights reserved.</copyright>
-    <lastBuildDate>Sun, 14 Feb 2021 21:31:49 +0800</lastBuildDate><atom:link href="https://msc0953.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>build e2e testing env from zero to 1 using Azure Devops</title>
-      <link>https://msc0953.github.io/post/build-e2e-testing-env-from-zero-to-1-using-azure-devops/</link>
-      <pubDate>Sun, 14 Feb 2021 21:31:49 +0800</pubDate>
-      
-      <guid>https://msc0953.github.io/post/build-e2e-testing-env-from-zero-to-1-using-azure-devops/</guid>
-      <description>工具  Azure DevOps - pipelines/repoes Terrform CLI Docker Installing Required Azure DevOps Extensions  Terraform Build &amp;amp; Release Tasks extension    環境  Azure DevOps pipelines  </description>
-    </item>
-    
+    <copyright>&amp;copy; 2021. All rights reserved.</copyright><atom:link href="https://msc0953.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://msc0953.github.io/about/</link>
