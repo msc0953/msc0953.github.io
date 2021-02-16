@@ -224,27 +224,56 @@
 
 </div>
 
-  <h2 id="design">Design</h2>
+  <h3 id="tools">Tools</h3>
 <ul>
-<li>Use yam file intead of command line to operate because of IAC</li>
-<li>Use test runner doing all of test cases as container</li>
-<li>Use Azure managed services instead of build-in service by myself</li>
-</ul>
-<h2 id="tools">Tools</h2>
+<li><a href="https://azure.microsoft.com/en-us/services/devops/">Azure DevOps</a>
 <ul>
-<li>Azure DevOps -  pipelines/repoes</li>
-<li>Terrform CLI</li>
-<li>Docker</li>
-<li>Installing Required Azure DevOps Extensions
-<ul>
-<li>Terraform Build &amp; Release Tasks extension</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=charleszipp.azure-pipelines-tasks-terraform">Installing Required Azure DevOps Extensions</a></li>
 </ul>
 </li>
+<li><a href="https://www.terraform.io/">Terrform CLI</a></li>
+<li><a href="https://www.docker.com/">Docker</a></li>
 </ul>
 <h3 id="environment">Environment</h3>
+<p>We are going build three components within End-to-End testing environment:</p>
+<ol>
+<li>Pipelines - build robot-framework docker image, execute e2e test cases</li>
+<li>Infrastructure - All services in end-to-end testing environment, include pipeline, repo, variables, agnet pool
 <ul>
-<li><a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/containers/build-image?view=azure-devops">build images</a>, push images using Azure DevOps</li>
+<li>Test Runner - The machine installed robot framework to execute test cases as container</li>
 </ul>
+</li>
+</ol>
+<h4 id="pipelines">Pipelines</h4>
+<ol>
+<li>build robot-framework docker image</li>
+<li>execute end-to-end test case</li>
+</ol>
+<h4 id="test-runner">Test Runner</h4>
+<ul>
+<li>Multiple test runner run as container within Azure Container Instances Group
+<ul>
+<li><a href="https://azure.microsoft.com/services/container-registry/">Azure Container Registry</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops#sep-docreg">Docker registry service connections</a>
+<ul>
+<li>add new service connections by manully (workarround)</li>
+</ul>
+</li>
+<li>Tasks used in your pipeline to <a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/containers/build-image?view=azure-devops">build images</a>, <a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/containers/push-image?view=azure-devops">push images</a></li>
+<li>The template used to create your test runner: <a href="https://github.com/ppodgorsek/docker-robot-framework">docker-robot-framework</a></li>
+<li>The template used to provision your test runner in Azure container Group: <a href="https://github.com/Azure/terraform-azurerm-aci-devops-agent/">terraform-azurerm-aci-devops-agent</a></li>
+</ul>
+</li>
+<li>Execute sample test cases in pipeline to choose one test runner from Azure agent pool</li>
+</ul>
+<h3 id="troubleshoot">Troubleshoot</h3>
+<ol>
+<li>Build your docker iamge on local machine</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker build -t<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;latest&#34;</span> .
+</code></pre></div><ol start="2">
+<li>Run</li>
+</ol>
 
   
   <h4><i class="fas fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
@@ -300,14 +329,8 @@
   </div>
   <div class="pure-u-10-24">
     
-    <nav class="next">
-      <a href="https://msc0953.github.io/post/advanced-web-attacks-exploitation-preparation/">advanced web attacks exploitation preparation</a>
-    </nav>
-    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
-    
-    <a href="https://msc0953.github.io/post/advanced-web-attacks-exploitation-preparation/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>

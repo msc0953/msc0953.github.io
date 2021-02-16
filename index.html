@@ -220,41 +220,6 @@
   
     <article>
   <header>
-    <h2><a href="https://msc0953.github.io/post/advanced-web-attacks-exploitation-preparation/">advanced web attacks exploitation preparation</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>15 Feb 2021, 01:23</time>
-  </div>
-
-  
-
-  
-
-  
-
-</div>
-
-  </header>
-
-  <p>
-  AWAE   WEB-300 - Learn white box web application security in Advanced Web Attacks and Exploitation
-  PentesterLab](https://pentesterlab.com/)
-  https://portswigger.net/web-security/all-materials
-  https://donavan.sg/blog/index.php/2020/03/14/the-awae-oswe-journey-a-review/
-https://medium.com/@fasthm00/the-state-of-oswe-c68150210fe4
-https://www.anquanke.com/post/id/217301
-  OSCP  OSCP: A 4-year Journey of &ldquo;Trying Harder&rdquo; https://github.com/strongcourage/oscp  
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
     <h2><a href="https://msc0953.github.io/post/build-e2e-testing-env-from-zero-to-1-using-azure-devops/">build e2e testing env from zero to 1 using Azure Devops</a></h2>
 
     <div class="post-meta">
@@ -275,9 +240,14 @@ https://www.anquanke.com/post/id/217301
   </header>
 
   <p>
-  Design  Use yam file intead of command line to operate because of IAC Use test runner doing all of test cases as container Use Azure managed services instead of build-in service by myself  Tools  Azure DevOps - pipelines/repoes Terrform CLI Docker Installing Required Azure DevOps Extensions  Terraform Build &amp; Release Tasks extension    Environment  build images, push images using Azure DevOps  
+  Tools  Azure DevOps  Installing Required Azure DevOps Extensions   Terrform CLI Docker  Environment We are going build three components within End-to-End testing environment:
+ Pipelines - build robot-framework docker image, execute e2e test cases Infrastructure - All services in end-to-end testing environment, include pipeline, repo, variables, agnet pool  Test Runner - The machine installed robot framework to execute test cases as container    Pipelines  build robot-framework docker image execute end-to-end test case  Test Runner  Multiple test runner run as container within Azure Container Instances Group  Azure Container Registry Docker registry service connections  add new service connections by manully (workarround)   Tasks used in your pipeline to build images, push images The template used to create your test runner: docker-robot-framework The template used to provision your test runner in Azure container Group: terraform-azurerm-aci-devops-agent   Execute sample test cases in pipeline to choose one test runner from Azure agent pool  Troubleshoot  Build your docker iamge on local machine  docker build -t=&#34;latest&#34; .
   </p>
 
+  
+  <footer>
+    <a href="https://msc0953.github.io/post/build-e2e-testing-env-from-zero-to-1-using-azure-devops/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
   
 </article>
 
