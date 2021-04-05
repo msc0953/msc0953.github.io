@@ -1,0 +1,13 @@
+---
+title: "Todo"
+date: 2021-02-21T03:15:55+08:00
+draft: true
+---
+
+1. run test case in parell
+2. run bvt cases in parell
+2. 怎麼讓 test case 可以平行化跑
+3. 怎麼寫 library 可以 supoort robotframework-hub
+4. jenkins unit test & integrate test
+5. headless
+6. cross browser testing
