@@ -1,0 +1,20 @@
+---
+title: "Design of Test Execution Service"
+date: 2021-02-21T21:59:10+08:00
+draft: true
+---
+
+## *Test Execution Service* 
+​	-> creating bed environment by using *Test Bed Service*
+​	-> setup test cases and system under test
+
+## *Test Data service*
+​        -> prepare test data 
+​	-> test utility to be micro service
+​	-> get data using RESTFUL API	
+
+How to design *Test Execution Service*
+
+## Test Bed Service
+
+implement by Azure Function App
