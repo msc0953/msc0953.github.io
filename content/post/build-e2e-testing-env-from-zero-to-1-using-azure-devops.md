@@ -1,7 +1,7 @@
 ---
 title: "Run tests with robot framework on Azure Devops from zero to 1"
 date: 2021-02-14T21:31:49+08:00
-draft: true
+draft: false
 ---
 
 ### Tools
